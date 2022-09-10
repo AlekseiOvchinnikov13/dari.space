@@ -9,14 +9,16 @@ const SocialLinks = ({className}) =>
       <a
         key={social.link}
         href={social.link}
-        target='_blank'
+        target="_blank"
+        rel="noreferrer"
       >
         <Image
           src={social.image}
           className={styles.image}
           width={45}
           height={45}
-          layout='fixed'
+          layout="fixed"
+          alt={social.link}
         />
       </a>
     )}

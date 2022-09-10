@@ -11,6 +11,7 @@ const Quote = ({quote, author}) =>
         src={quotesImage}
         layout="fill"
         objectFit="fill"
+        alt='quotes'
       />
     </div>
   </div>;
