@@ -11,7 +11,7 @@
       .link {
         color: $FONT_COLOR;
         border-bottom: 1px solid transparent;
-        text-transform: capitalize;
+        text-transform: uppercase;
         transition: all .3ms ease-in-out;
 
         &:hover, &:focus {

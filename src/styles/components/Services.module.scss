@@ -3,7 +3,7 @@
 .serviceCardsWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: .02777em;
+  gap: max(.02777em, 30px);
 
   .serviceCard {
     display: grid;
