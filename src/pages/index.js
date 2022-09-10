@@ -1,12 +1,49 @@
-import styles from '../styles/Home.module.scss';
 import Image from 'next/image';
 import mainPhoto from '../../public/images/main-photo.jpg';
 import Advantages from '../components/Advantages';
 import Quote from '../components/Quote';
 import Title from '../components/Title';
 import Services from '../components/Services';
+import {Carousel} from 'react-responsive-carousel';
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import styles from '../styles/Home.module.scss';
+import {yellowColor} from '../styles/variables.module.scss';
+import {REVIEWS_DATA} from '../data/reviews';
 
 const Home = () => {
+  const settingsSlider = {
+    showThumbs: false,
+    showArrows: false,
+    autoPlay: false,
+    selectedItem: 1,
+    showStatus: false,
+    infiniteLoop: true,
+    centerMode: true,
+    centerSlidePercentage: 100,
+    showIndicators: true
+  };
+
+  const indicatorStyles = {
+    background: yellowColor,
+    width: 20,
+    height: 20,
+    display: 'inline-block',
+    margin: '0 8px',
+    borderRadius: '50%',
+    border: '2px solid transparent',
+    marginBottom: '-.2361em'
+  };
+
+  const Reviews = REVIEWS_DATA.map(review =>
+    <div className={styles.reviewSlide} key={review.id}>
+      <Image
+        src={review.src}
+        alt={`review${review.id}`}
+      />
+    </div>
+  );
+
   return (
     <>
       <section className={`${styles.aboutSection} ${styles.paddingSectionBottom} container`} id="about">
@@ -16,6 +53,7 @@ const Home = () => {
               src={mainPhoto}
               objectFit="contain"
               layout="fill"
+              alt="me"
             />
           </div>
           <div className={styles.aboutText}>
@@ -49,6 +87,37 @@ const Home = () => {
           </div>
           <div className={styles.paddingSectionBottom} id="reviews">
             <Title label="отзывы"/>
+            <div className={styles.carouselWrapper}>
+              <Carousel
+                {...settingsSlider}
+                renderIndicator={(onClickHandler, isSelected, index, label) => {
+                  if (isSelected) {
+                    return (
+                      <li
+                        style={{...indicatorStyles, background: 'transparent', border: `2px solid ${yellowColor}`}}
+                        aria-label={`Selected: ${label} ${index + 1}`}
+                        title={`Selected: ${label} ${index + 1}`}
+                      />
+                    );
+                  }
+                  return (
+                    <li
+                      style={indicatorStyles}
+                      onClick={onClickHandler}
+                      onKeyDown={onClickHandler}
+                      value={index}
+                      key={index}
+                      role="button"
+                      tabIndex={0}
+                      title={`${label} ${index + 1}`}
+                      aria-label={`${label} ${index + 1}`}
+                    />
+                  );
+                }}
+              >
+                {Reviews}
+              </Carousel>
+            </div>
           </div>
           <Quote
             author="Карл Густав Юнг"

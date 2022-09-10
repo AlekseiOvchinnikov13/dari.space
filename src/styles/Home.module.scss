@@ -60,12 +60,10 @@
 .servicesSection {
   background: $BACKGROUND_SECONDARY;
 
-  .servicesWrapper {
-
-  }
-
-  .reviewsWrapper {
-
+  .carouselWrapper {
+    .reviewSlide {
+      font-size: .04444em;
+    }
   }
 }
 

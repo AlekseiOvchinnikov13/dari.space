@@ -11,3 +11,6 @@ $YELLOW_COLOR: #f7ba42;
 $FONT_FAMILY_MONTSERRAT: 'Montserrat', sans-serif;
 $FONT_FAMILY_MERRIWEATHER: 'Merriweather', sans-serif;
 
+:export {
+  yellowColor: $YELLOW_COLOR;
+}
