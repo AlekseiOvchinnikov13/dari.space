@@ -16,7 +16,7 @@ const Home = () => {
     showThumbs: false,
     showArrows: false,
     autoPlay: false,
-    selectedItem: 1,
+    selectedItem: 0,
     showStatus: false,
     infiniteLoop: true,
     centerMode: true,
