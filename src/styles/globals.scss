@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet');
+@import 'variables.module';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body, html {
+  margin: 0;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: $FONT_FAMILY_MONTSERRAT;
+  font-size: max(100vw, 450px);
+  background-color: $BACKGROUND_PRIMARY;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, ul, ol, li, div, span, button, menu {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a, button {
+  cursor: pointer;
+  font-family: $FONT_FAMILY_MONTSERRAT;
+}
+
+.container {
+  padding: 0 .083333em;
+}

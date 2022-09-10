@@ -1,0 +1,11 @@
+.layout {
+  padding: .03819em .083333em;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 450px) {
+  .layout {
+    padding: .044em;
+  }
+}

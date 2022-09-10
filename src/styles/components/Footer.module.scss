@@ -1,0 +1,14 @@
+@import "../variables.module";
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: .03472em;
+
+  .quote,.copyright {
+    font-size: 18px;
+    font-weight: 300;
+    color: $FONT_COLOR;
+  }
+}
+
