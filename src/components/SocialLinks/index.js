@@ -1,9 +1,9 @@
-import styles from '../../styles/components/SocialLinks.module.scss'
+import styles from '../../styles/components/SocialLinks.module.scss';
 
-const SocialLinks = () =>
-  <div className={styles.socialLinksWrapper}>
-    f
-  </div>
+const SocialLinks = ({className}) =>
+  <div className={`${styles.socialLinksWrapper} ${className}`}>
+    tg, mail, wa, in
+  </div>;
 
 
-export default SocialLinks
+export default SocialLinks;

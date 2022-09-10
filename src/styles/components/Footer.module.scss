@@ -3,12 +3,25 @@
 .footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: .03472em;
+  gap: .013888em .03472em;
+  place-items: center;
 
-  .quote,.copyright {
+  .quote, .copyright {
     font-size: 18px;
     font-weight: 300;
     color: $FONT_COLOR;
+    grid-column: 1;
+    justify-self: flex-start;
+  }
+
+  .quote, .copyright, .social {
+    align-self: center;
+  }
+
+  .social {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    justify-self: flex-end;
   }
 }
 

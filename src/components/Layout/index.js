@@ -1,8 +1,8 @@
 import {useLayoutEffect, useState} from 'react';
 import {isBrowser} from '../../utils';
 import Head from 'next/head';
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from '../Header';
+import Footer from '../Footer';
 
 import styles from '../../styles/components/Layout.module.scss';
 
