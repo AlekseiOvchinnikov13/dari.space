@@ -1,0 +1,28 @@
+@import '../variables.module';
+
+.quoteWrapper {
+  padding: .045138em 0;
+  position: relative;
+
+  .quote {
+    font-family: $FONT_FAMILY_MERRIWEATHER;
+    font-size: max(.019444em, 20px);
+    text-align: center;
+  }
+
+  .author {
+    font-size: max(.0125em, 14px);
+    font-weight: 500;
+    text-align: right;
+    margin-top: 1.111em;
+  }
+
+  .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: .14583em;
+    height: .114583em;
+  }
+}

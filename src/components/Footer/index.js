@@ -1,5 +1,6 @@
-import styles from '../../styles/components/Footer.module.scss';
 import SocialLinks from '../SocialLinks';
+
+import styles from '../../styles/components/Footer.module.scss';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

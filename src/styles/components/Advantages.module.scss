@@ -1,0 +1,72 @@
+@import '../variables.module';
+
+.advCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: baseline;
+
+  .advCard {
+    color: $FONT_COLOR;
+    text-align: center;
+    padding-top: max(.03819em, 30px);
+    width: 100%;
+
+    .number {
+      font-size: max(.01944em, 20px);
+      line-height: 1;
+    }
+
+    .text {
+      font-size: max(.0125em, 14px);
+      margin: 4.111em auto;
+      max-width: 10.111em;
+      width: 100%;
+    }
+  }
+
+  .advCard + .advCard {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: max(.18055em, 230px);
+      width: 1px;
+      background: $FONT_COLOR;
+
+      top: calc(.03819em + max(.0125em, 14px));
+      right: 100%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .advCardsWrapper {
+    grid-template-columns: 1fr 1fr;
+
+    .advCard:nth-child(3) {
+      &::before {
+        content: none;
+      }
+    }
+
+    .advCard + .advCard::before {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .advCardsWrapper {
+    .advCard + .advCard::before {
+      content: none;
+    }
+    .advCard{
+      .text {
+        font-size: 10px;
+      }
+    }
+  }
+}

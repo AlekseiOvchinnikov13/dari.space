@@ -14,10 +14,10 @@ export const SOCIAL_LINKS = [
   },
   {
     image: instagramIcon,
-    link: '',
+    link: 'https://www.instagram.com/ovchinnikova.dari/',
   },
   {
     image: mailIcon,
-    link: '',
+    link: 'mailto:#@yandex.ru',
   },
 ];

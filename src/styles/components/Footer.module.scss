@@ -5,9 +5,11 @@
   grid-template-columns: 2fr 1fr;
   gap: .013888em .03472em;
   place-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   .quote, .copyright {
-    font-size: 18px;
+    font-size: max(.0125em, 18px);
     font-weight: 300;
     color: $FONT_COLOR;
     grid-column: 1;
@@ -25,3 +27,18 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: 1fr;
+
+    .social {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 20px 0;
+    }
+
+    .copyright, .social {
+      justify-self: center;
+    }
+  }
+}

@@ -49,5 +49,5 @@ a, button {
 }
 
 .container {
-  padding: 0 .083333em;
+  padding: 0 min(.083333em, 120px);
 }

@@ -1,3 +1,11 @@
 .socialLinksWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   font-size: 20px;
+
+  .image {
+    width: 45px;
+    height: 46px;
+  }
 }

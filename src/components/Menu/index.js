@@ -2,6 +2,7 @@ import {useRef} from 'react';
 import {menu} from '../../data/menu';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+
 import styles from '../../styles/components/Menu.module.scss';
 
 const Menu = ({isMobile}) => {
