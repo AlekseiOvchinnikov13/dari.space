@@ -10,6 +10,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from '../styles/Home.module.scss';
 import {yellowColor} from '../styles/variables.module.scss';
 import {REVIEWS_DATA} from '../data/reviews';
+import ContactForm from '../components/ContactForm';
 
 const Home = () => {
   const settingsSlider = {
@@ -84,6 +85,9 @@ const Home = () => {
           <div className={styles.paddingSectionBottom} id="services">
             <Title label="услуги"/>
             <Services/>
+            <p className={styles.duration}>
+              Длительность любой сессии составляет 1,5-2 часа
+            </p>
           </div>
           <div className={styles.paddingSectionBottom} id="reviews">
             <Title label="отзывы"/>
@@ -125,11 +129,13 @@ const Home = () => {
           />
         </div>
       </section>
-      <section className={`${styles.faqSection} ${styles.paddingSectionTop}`} id="faq">
+      <section className={`${styles.faqSection} ${styles.paddingSectionTop} container`} id="faq">
         <Title label="f.a.q."/>
       </section>
-      <section className={`${styles.contactsSection} ${styles.paddingSectionTop}`} id="contact">
+      <section className={`${styles.contactsSection} ${styles.paddingSectionTop} container`} id="contact">
         <Title label="связь со мной"/>
+        <p className={styles.contactText}>С удовольствием отвечу на любые ваши вопросы</p>
+        <ContactForm/>
       </section>
     </>
   );

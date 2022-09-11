@@ -1,0 +1,87 @@
+@import '../variables.module';
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: max(.02777em, 30px);
+
+  position: relative;
+  padding-top: max(.038194em, 30px);
+
+  .succeeded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 20vw;
+    border: 1px solid $YELLOW_COLOR;
+    background: $BACKGROUND_PRIMARY;
+    padding: max(.020833em, 20px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .successText {
+      color: $FONT_COLOR;
+      font-size: max(.01666em, 18px);
+      text-align: center;
+    }
+  }
+
+  .input {
+    color: $FONT_COLOR;
+    font-family: $FONT_FAMILY_MONTSERRAT;
+    font-size: max(.01666em, 18px);
+    font-weight: 300;
+
+    border: none;
+    border-bottom: 1px solid $FONT_COLOR;
+    padding-bottom: max(.625em, 10px);
+  }
+
+  .message, .submit {
+    grid-column: 1 / span 2;
+  }
+
+  .submit {
+    justify-self: center;
+
+    color: $FONT_COLOR;
+    font-size: max(.01666em, 18px);
+    line-height: 1;
+    font-weight: 600;
+    padding: 1.04166em 0;
+    background: $YELLOW_COLOR;
+    border: 1px solid transparent;
+    max-width: 10em;
+    width: 100%;
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      border: 1px solid $YELLOW_COLOR;
+      background: transparent;
+    }
+
+    &:disabled {
+      opacity: .5;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .form {
+    grid-template-columns: 1fr;
+
+    .message, .submit {
+      grid-column: 1;
+    }
+
+    .succeeded {
+      width: 90vw;
+      height: 35vw;
+    }
+  }
+}

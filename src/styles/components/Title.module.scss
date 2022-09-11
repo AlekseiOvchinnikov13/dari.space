@@ -2,7 +2,7 @@
 
 .title {
   color: $FONT_COLOR;
-  font-size: .04444em;
+  font-size: max(.04444em, 38px);
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;

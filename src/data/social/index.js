@@ -18,6 +18,6 @@ export const SOCIAL_LINKS = [
   },
   {
     image: mailIcon,
-    link: 'mailto:#@yandex.ru',
+    link: 'mailto:psy.ovchinnikova.dari@ya.ru',
   },
 ];

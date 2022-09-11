@@ -65,6 +65,13 @@
       font-size: .04444em;
     }
   }
+
+  .duration {
+    color: $FONT_COLOR;
+    font-size: max(.0125em, 14px);
+    text-align: center;
+    margin-top: 1.42857em;
+  }
 }
 
 .faqSection {
@@ -72,7 +79,12 @@
 }
 
 .contactsSection {
-
+  .contactText {
+    color: $FONT_COLOR;
+    font-weight: 300;
+    font-size: max(.01666em, 18px);
+    text-align: center;
+  }
 }
 
 @media (max-width: 920px) {
