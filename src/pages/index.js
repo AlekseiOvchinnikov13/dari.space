@@ -5,12 +5,15 @@ import Quote from '../components/Quote';
 import Title from '../components/Title';
 import Services from '../components/Services';
 import {Carousel} from 'react-responsive-carousel';
-
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import styles from '../styles/Home.module.scss';
-import {yellowColor} from '../styles/variables.module.scss';
 import {REVIEWS_DATA} from '../data/reviews';
 import ContactForm from '../components/ContactForm';
+import armsImage from '../../public/images/arms.svg';
+import Accordion from '../components/Accordion';
+import {FAQ_DATA} from '../data/faq';
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import {yellowColor} from '../styles/variables.module.scss';
+import styles from '../styles/Home.module.scss';
 
 const Home = () => {
   const settingsSlider = {
@@ -129,10 +132,19 @@ const Home = () => {
           />
         </div>
       </section>
-      <section className={`${styles.faqSection} ${styles.paddingSectionTop} container`} id="faq">
+      <section className={`${styles.paddingSectionTop} container`} id="faq">
         <Title label="f.a.q."/>
+        <Accordion data={FAQ_DATA}/>
       </section>
       <section className={`${styles.contactsSection} ${styles.paddingSectionTop} container`} id="contact">
+        <div className={styles.armsWrapper}>
+          <Image
+            src={armsImage}
+            objectFit="fill"
+            layout="fill"
+            alt="arms"
+          />
+        </div>
         <Title label="связь со мной"/>
         <p className={styles.contactText}>С удовольствием отвечу на любые ваши вопросы</p>
         <ContactForm/>

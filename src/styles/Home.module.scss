@@ -74,11 +74,20 @@
   }
 }
 
-.faqSection {
-
-}
-
 .contactsSection {
+  position: relative;
+
+  .armsWrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 100%;
+    width: 90%;
+    opacity: .7;
+  }
+
   .contactText {
     color: $FONT_COLOR;
     font-weight: 300;
