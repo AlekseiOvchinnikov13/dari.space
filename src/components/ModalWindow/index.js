@@ -1,5 +1,5 @@
 import {useRef} from 'react';
-import styles from '../../styles/Components/ModalWindow.module.scss';
+import styles from '../../styles/components/ModalWindow.module.scss';
 
 const ModalWindow = ({visible, onClose, children}) => {
   const modalDialogRef = useRef(null);
