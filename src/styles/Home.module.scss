@@ -63,6 +63,10 @@
   .carouselWrapper {
     .reviewSlide {
       font-size: .04444em;
+
+      .reviewImage {
+        border-radius: 10px;
+      }
     }
   }
 

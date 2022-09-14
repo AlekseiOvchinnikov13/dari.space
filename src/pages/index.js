@@ -25,7 +25,9 @@ const Home = () => {
     infiniteLoop: true,
     centerMode: true,
     centerSlidePercentage: 100,
-    showIndicators: true
+    showIndicators: true,
+    emulateTouch: true,
+    swipeable: true
   };
 
   const indicatorStyles = {
@@ -44,6 +46,7 @@ const Home = () => {
       <Image
         src={review.src}
         alt={`review${review.id}`}
+        className={styles.reviewImage}
       />
     </div>
   );
@@ -147,7 +150,7 @@ const Home = () => {
         </div>
         <Title label="связь со мной"/>
         <p className={styles.contactText}>С удовольствием отвечу на любые ваши вопросы</p>
-        <ContactForm/>
+        <ContactForm isContact/>
       </section>
     </>
   );

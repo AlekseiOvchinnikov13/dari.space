@@ -1,0 +1,129 @@
+@import '../variables.module';
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, .5);
+  animation-name: appear;
+  animation-duration: .3ms;
+
+  .modalDialog {
+    width: 100%;
+    max-width: .3571em;
+    margin: 0 20px;
+
+    background-color: $BACKGROUND_PRIMARY;
+    border-radius: .0071em;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .modalHeader, .modalBody {
+      padding: max(.02em, 20px) .0357em;
+      width: 100%;
+    }
+
+    .modalHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .modalTitle, .modalClose {
+        color: $FONT_COLOR;
+        line-height: 1;
+      }
+
+      .modalTitle {
+        font-size: max(.017em, 18px);
+      }
+
+      .modalClose {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        font-size: max(.025em, 24px);
+      }
+    }
+
+    .modalBody {
+      overflow: auto;
+    }
+  }
+
+  .modalDialogOut {
+    animation-name: slide-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal .modalDialog {
+    max-width: .4882em;
+    max-height: .47em;
+  }
+  .calculatorModalWindow .modalDialog {
+    max-width: .5859em;
+    max-height: .5em;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal .modalDialog {
+    max-width: 80vw;
+    max-height: unset;
+    height: unset;
+  }
+  .modal .modalDialog {
+    border-radius: .03777em;
+  }
+  .modal .modalDialog .modalBody {
+    padding: .03em .04em;
+  }
+  .calculatorModalWindow .modalDialog {
+    border-radius: .01333em;
+    max-width: 90vw;
+  }
+}
