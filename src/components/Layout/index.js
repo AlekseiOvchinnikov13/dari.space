@@ -23,6 +23,7 @@ const Layout = ({children}) => {
         <meta name="description" content="Практикующий специалист. Работаю с любым запросом. Приглашаю в безопасное пространство для глубокой трансформации 🕊."/>
         <link rel="icon" href="/favicon.ico"/>
         <meta name="theme-color" content="#000000"/>
+        <meta name="yandex-verification" content="f0fb2c6089ec6bd8" />
 
         <meta property="og:title" content="Овчинникова Дарья | Психолог Казань и Онлайн"/>
         <meta property="og:locale" content="ru_RU"/>
