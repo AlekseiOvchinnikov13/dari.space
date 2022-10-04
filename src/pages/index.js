@@ -86,7 +86,7 @@ const Home = () => {
         <div className="container">
           <Quote
             author="Карл Густав Юнг"
-            quote="“Пока вы&nbsp;не&nbsp;сделаете бессознательное сознательным,оно будет управлять вашей жизнью и&nbsp;вы&nbsp;назовёте это судьбой”"
+            quote="“Пока вы&nbsp;не&nbsp;сделаете бессознательное сознательным, оно будет управлять вашей жизнью и&nbsp;вы&nbsp;назовёте это судьбой”"
           />
           <div className={styles.paddingSectionBottom} id="services">
             <Title label="услуги"/>

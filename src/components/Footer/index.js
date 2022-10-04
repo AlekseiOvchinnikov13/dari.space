@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className={`${styles.footer} container`}>
       <p className={styles.quote}>
         Всё зависит от того, как мы&nbsp;смотрим на&nbsp;вещи, а&nbsp;не&nbsp;от&nbsp;того, каковы вещи сами
-        по&nbsp;себе. Меняя мировоззрение, вы&nbsp;меняетее себя, а&nbsp;с&nbsp;вами меняется мир.
+        по&nbsp;себе. Меняя мировоззрение, вы&nbsp;меняете себя, а&nbsp;с&nbsp;вами меняется мир.
       </p>
       <SocialLinks className={styles.social}/>
       <p className={styles.copyright}>
